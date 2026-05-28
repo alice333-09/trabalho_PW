@@ -12,7 +12,7 @@
     <title>Funcionários</title>
 </head>
 <body>
-    <a href="create.php"><button>Adicionar funcionário</button></a>
+    <a href="createfunc.php"><button>Adicionar funcionário</button></a>
     <table>
         <thead>
             <tr>

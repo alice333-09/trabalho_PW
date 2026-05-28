@@ -10,7 +10,7 @@
         <label for="func">Adicionar funcionário</label>
         <input type="text" name="func">
         <button type="submit">Salvar</button>
-        <a href="index1.php"><button>Cancelar</button></a>
+        <a href="indexfunc.php"><button>Cancelar</button></a>
     </form>
 </body>
 </html>

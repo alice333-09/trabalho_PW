@@ -18,9 +18,9 @@ if (!isset($_SESSION['usuario_id'])) {
 </head>
 <body>
     <h1>Seja bem-vindo(a), <?php echo $_SESSION['usuario_nome']; ?>!</h1>.
-    <a href="CRUD1/index1.php"><button>Funcionários</button></a>
-    <a href="CRUD2/index2.php"><button>Clientes</button></a>
-    <a href="CRUD3/index3.php"><button>Vendas</button></a>
+    <a href="CRUDfunc/index1.php"><button>Funcionários</button></a>
+    <a href="CRUDclie/index2.php"><button>Clientes</button></a>
+    <a href="CRUDvend/index3.php"><button>Vendas</button></a>
 
     <a href="logout.php"><button>Sair do Sistema</button></a>
 </body>
