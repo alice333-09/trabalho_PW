@@ -6,7 +6,7 @@
     <title>Adicionar funcionário</title>
 </head>
 <body>
-    <form action="create.php" method="post">
+    <form action="createfunc.php" method="post">
         <label for="func">Adicionar funcionário</label>
         <input type="text" name="func">
         <button type="submit">Salvar</button>
