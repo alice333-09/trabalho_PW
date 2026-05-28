@@ -20,7 +20,7 @@ if (!empty($usuario) && !empty($senha)) {
             exit();
             
         } else {
-            echo "Senha incorreta!";
+            echo "Senha ou usuário incorreto!";
         }
         
     } else {
