@@ -16,7 +16,7 @@ if (isset($_SESSION['erro_login'])) {
     <h2>Área de Login</h2>
     <form action="validarlogin.php" method="POST">
         <label>Usuário/E-mail:</label><br>
-        <input type="text" name="usuario" required><br><br>
+        <input type="email" name="usuario" required><br><br>
         
         <label>Senha:</label><br>
         <input type="password" name="senha" required><br><br>

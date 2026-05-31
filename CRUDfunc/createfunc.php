@@ -18,7 +18,7 @@
         <input type="radio" name="turno" id="noturno" value="Noturno">
         <label for="noturno">Noturno</label><br>
         
-        Horas: <input type="text" name="horas"><br><br>
+        Horas: <input type="time" name="horas"><br><br>
 
         <button type="submit">Salvar</button>
         <a href="indexfunc.php"><button type="button">Cancelar</button></a>

@@ -45,11 +45,11 @@
         <label for="name">Atualizar funcionário</label><br><br>
         Nome: <input type="text" name="nome" value="<?php echo $func->nome; ?>"><br>
 
-        Turno: <input type="radio" name="turno" id="matutino" value="matutino" <?php echo ($func->turno == 'Matutino') ? 'checked' : ''; ?>>
+        Turno: <input type="radio" name="turno" value="Matutino" id="matutino" <?php echo ($func->turno == 'Matutino') ? 'checked' : ''; ?>>
         <label for="matutino">Matutino</label>
-        <input type="radio" name="turno" value="vespertino" id="vespertino" <?php echo ($func->turno == 'Vespertino') ? 'checked' : ''; ?>>
+        <input type="radio" name="turno" value="Vespertino" id="vespertino" <?php echo ($func->turno == 'Vespertino') ? 'checked' : ''; ?>>
         <label for="name">Vespertino</label>
-        <input type="radio" name="turno" value="noturno" id="noturno" <?php echo ($func->turno == 'Noturno') ? 'checked' : ''; ?>>
+        <input type="radio" name="turno" value="Noturno" id="noturno" <?php echo ($func->turno == 'Noturno') ? 'checked' : ''; ?>>
         <label for="matutino">Noturno</label><br>
 
         Horas: <input type="text" name="horas" value="<?php echo $func->horas; ?>"><br><br>
