@@ -1,28 +1,32 @@
 <?php
 session_start(); 
-
-if (isset($_SESSION['erro_login'])) {
-    echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-center max-w-md mx-auto mt-4" role="alert">' . $_SESSION['erro_login'] . '</div>';
-    unset($_SESSION['erro_login']);
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR" class="h-full bg-gray-50">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sistema Gerenciador</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-md border border-gray-100">
+    
+    <div class="max-w-md w-full space-y-6 bg-white p-8 rounded-xl shadow-md border border-gray-100">
         <div>
             <h2 class="mt-2 text-center text-3xl font-extrabold text-gray-950 tracking-tight">
-            Área de Login
+                Área de Login
             </h2>
         </div>
 
-    <form class="mt-8 space-y-6" action="validarlogin.php" method="POST">
-            <div class="space-y-4 rounded-md shadow-sm">
+        <?php
+        if (isset($_SESSION['erro_login'])) {
+            echo '<div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm font-medium text-center shadow-sm" role="alert">' . $_SESSION['erro_login'] . '</div>';
+            unset($_SESSION['erro_login']);
+        }
+        ?>
+
+        <form class="mt-4 space-y-5" action="validarlogin.php" method="POST">
+            <div class="space-y-4">
                 <div>
                     <label for="usuario" class="block text-sm font-medium text-gray-700 mb-1">
                         Usuário/E-mail
@@ -48,6 +52,7 @@ if (isset($_SESSION['erro_login'])) {
                     >
                 </div>
             </div>
+
             <div>
                 <button 
                     type="submit" 
@@ -58,7 +63,6 @@ if (isset($_SESSION['erro_login'])) {
             </div>
         </form>
     </div>
+
 </body>
 </html>
-
-
