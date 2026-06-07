@@ -1,9 +1,6 @@
-
 <?php
-// Inicia a sessão para verificar as variáveis guardadas
 session_start();
 
-// Se a variável de sessão não existir, manda de volta para a tela de login
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: login.php");
     exit();
