@@ -1,3 +1,25 @@
+<?php
+require_once '../conexao.php';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $clie = $_POST['nome'];
+    $data = $_POST['data'];
+    $valor = $_POST['valor'];
+
+    $stmt = $conect->prepare("INSERT INTO clientes (nome, dt_venda, valor) VALUES (:nome, :dt_venda, :valor)");
+    $stmt->bindValue(":nome", $clie);
+    $stmt->bindValue(":dt_venda", $data);
+    $stmt->bindValue(":valor", $valor);
+
+    if($stmt->execute()){
+        header("location:indexclie.php");
+        exit();
+    }else{
+        $erro = $stmt->errorInfo();
+        echo"Erro ao salvar". $erro[2];
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR" class="h-full bg-gray-50">
 <head>
@@ -59,26 +81,3 @@
 
 </body>
 </html>
-
-<?php
-require_once '../conexao.php';
-
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $clie = $_POST['nome'];
-    $data = $_POST['data'];
-    $valor = $_POST['valor'];
-
-    $stmt = $conect->prepare("INSERT INTO clientes (nome, dt_venda, valor) VALUES (:nome, :dt_venda, :valor)");
-    $stmt->bindValue(":nome", $clie);
-    $stmt->bindValue(":dt_venda", $data);
-    $stmt->bindValue(":valor", $valor);
-
-    if($stmt->execute()){
-        header("location:indexclie.php");
-        exit();
-    }else{
-        $erro = $stmt->errorInfo();
-        echo"Erro ao salvar". $erro[2];
-        }
-    }
-?>

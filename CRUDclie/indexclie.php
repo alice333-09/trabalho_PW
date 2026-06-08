@@ -52,7 +52,7 @@ if(isset($_GET['delete_clie'])){
                             <tr>
                                 <th class="px-6 py-4">id</th>
                                 <th class="px-6 py-4">nome</th>
-                                <th class="px-6 py-4">dt_venda</th>
+                                <th class="px-6 py-4">data de venda</th>
                                 <th class="px-6 py-4">valor</th>
                                 <th class="px-6 py-4 text-right">botões</th>
                             </tr>
